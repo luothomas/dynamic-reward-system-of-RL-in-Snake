@@ -104,7 +104,7 @@ class SnakeGameAI:
             self.snake.pop()
             
         # 4. check if game over & dyanmic penalty
-        if self.is_collision() or self.frame_iteration > 100*len(self.snake):
+        if self.is_collision() or self.frame_iteration > 50*len(self.snake):
             if self.init_distance:
                 penalty = -10 * (1 - current_distance / self.init_distance)
             else:
